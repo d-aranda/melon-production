@@ -35,4 +35,7 @@ class Melon:
 class Squash(Melon):
     """Winter squash."""
 
-    # FIX ME: Add Squash class definition here.
+    def prep(self):
+        robots.cleanerbot.clean(self)
+        robots.stickerbot.apply_logo(self)
+        robots.painterbot.paint(self)
